@@ -1,0 +1,94 @@
+.skills {
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 16px;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.skill-item:hover {
+  border-color: var(--accent-blue);
+  background: var(--accent-glow);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 212, 255, 0.1);
+}
+
+/* ── Circular Progress Ring ── */
+
+.skill-ring-wrapper {
+  position: relative;
+  width: 70px;
+  height: 70px;
+}
+
+.skill-ring-wrapper svg {
+  transform: rotate(-90deg);
+}
+
+.skill-ring-bg {
+  fill: none;
+  stroke: var(--border-color);
+  stroke-width: 4;
+}
+
+.skill-ring-progress {
+  fill: none;
+  stroke: url(#skillGradient);
+  stroke-width: 4;
+  stroke-linecap: round;
+  transition: stroke-dashoffset 1s ease-out;
+}
+
+.skill-percentage {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  color: var(--accent-blue);
+}
+
+.skill-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.skill-category {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+  }
+  .skill-item {
+    padding: 16px 12px;
+  }
+  .skill-ring-wrapper {
+    width: 56px;
+    height: 56px;
+  }
+}
