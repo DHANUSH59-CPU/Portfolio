@@ -100,7 +100,7 @@ const Hero = ({ data }) => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <span className="hero-title-prefix">I'm a</span>
+          <span className="hero-title-prefix">I'm a </span>
           <TypeAnimation
             sequence={typingSequence}
             speed={50}

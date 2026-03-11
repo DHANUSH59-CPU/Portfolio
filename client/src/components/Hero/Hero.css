@@ -18,7 +18,7 @@
   position: relative;
   z-index: 2;
   text-align: center;
-  max-width: 800px;
+  max-width: 900px;
   padding: 0 24px;
 }
 
@@ -39,6 +39,21 @@
   background-clip: text;
   margin-bottom: 16px;
   line-height: 1.1;
+}
+
+.hero-titles {
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-weight: 400;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+.hero-title-prefix {
+  margin-right: 8px;
 }
 
 .hero-role {
@@ -69,7 +84,7 @@
 
 /* ── Scroll Indicator ── */
 
-.scroll-indicator {
+.hero-scroll-indicator {
   position: absolute;
   bottom: 30px;
   left: 50%;
